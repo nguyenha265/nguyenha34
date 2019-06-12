@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-left: 250px;margin-top: 100px">
+    <textarea cols="100" rows="20" onkeydown="tyPing(this,event)"></textarea>
+</form>
+<script>
+    let i = 0;
+    function tyPing(ha,event) {
+        event.preventDefault();
+        let hien = ["T","h","ầ","y"," ","Ơ","i"," ","C","ứ","u"," ","E","m"," ","V","ớ","i"];
+        ha.value+=hien[i];
+        i++;
+        if(i==hien.length+1){
+            i=0;
+            ha.value="";
+        }
+    }
+</script>
+</body>
+</html>
